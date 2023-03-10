@@ -5,10 +5,12 @@ def build_heap(data):
     for i in range(len(data) // 1, -1, -1):
         while i * 2 + 1 < len(data):
             heap_ch = 1 + 2 * i
-            if heap_ch + 1 < len(data) and data[heap_ch + 1] < data[heap_ch]:
+            if data[heap_ch + 1] < data[heap_ch] and heap_ch + 1 < len(data):
                 heap_ch = heap_ch + 1
-            swaps.append((i, heap_ch))
+            if data[i] < data[heap_ch] or heap_ch > len(data):
+                break
             data[heap_ch], data[i] = data[i], data[heap_ch]
+            swaps.append((i, heap_ch))
             i = heap_ch
     return swaps
 
