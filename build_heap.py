@@ -21,7 +21,7 @@ def main():
         assert len(data) == n
         swaps = build_heap(data)
 
-    elif i == "F":
+    if i == "F":
         input_key = input()
         location  = "tests/" + input_key
         with open(location) as f:
