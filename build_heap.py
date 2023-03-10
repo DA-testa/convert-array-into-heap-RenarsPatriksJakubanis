@@ -15,13 +15,13 @@ def build_heap(data):
 
 def main():
     data = []
-    i = input()
-    if i == "I":
+    a = input()
+    if a == "I":
         n = int(input())
         data = list(map(int, input().split()))
         assert len(data) == n
 
-    elif i == "F":
+    elif a == "F":
         input_key = input()
         location  = "tests/" + input_key
         with open(location) as f:
