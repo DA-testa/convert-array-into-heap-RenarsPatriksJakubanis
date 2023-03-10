@@ -19,6 +19,7 @@ def main():
         n = int(input())
         data = list(map(int, input().split()))
         assert len(data) == n
+        swaps = build_heap(data)
 
     elif i == "F":
         input_key = input()
@@ -27,8 +28,7 @@ def main():
             n = int(f.readline())
             data = list(map(int, f.readline().split()))
             assert len(data) == n
-
-    swaps = build_heap(data)
+            swaps = build_heap(data)
 
     print(len(swaps))
     for i, j in swaps:
