@@ -26,6 +26,7 @@ def main():
         input_key = input()
         location  = "tests/" + input_key
         with open(location) as f:
+            n = f.readline()
             data = list(map(int, f.readline().split()))
             swaps = build_heap(data)
     
