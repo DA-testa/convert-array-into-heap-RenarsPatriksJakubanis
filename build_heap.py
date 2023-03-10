@@ -18,7 +18,6 @@ def main():
         n = input()
         data = list(map(int, input().split()))
         swaps = build_heap(data)
-
     elif i == "F":
         with open("tests/04") as f:
             n = f.read()
