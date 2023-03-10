@@ -26,10 +26,8 @@ def main():
         input_key = input()
         location  = "tests/" + input_key
         with open(location) as f:
-            n = int(f.readline())
             data = list(map(int, f.readline().split()))
             swaps = build_heap(data)
-            assert len(data) == n
     
     print(len(swaps))
     for i, j in swaps:
