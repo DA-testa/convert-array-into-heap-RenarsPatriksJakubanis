@@ -13,13 +13,16 @@ def build_heap(data):
     return swaps
 
 def main():
+    swaps = []
     i = input()
     if i == "I":
         n = input()
         data = list(map(int, input().split()))
         swaps = build_heap(data)
     elif i == "F":
-        with open("tests/04") as f:
+        n = input()
+        location  = "tests/" + n
+        with open(location) as f:
             n = f.read()
             data = list(map(int, n.split()))
             swaps = build_heap(data)
