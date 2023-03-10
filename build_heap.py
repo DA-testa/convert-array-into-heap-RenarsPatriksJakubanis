@@ -16,12 +16,12 @@ def build_heap(data):
 def main():
     data = []
     a = input()
-    if a == "I":
+    if "I" in a:
         n = int(input())
         data = list(map(int, input().split()))
         assert len(data) == n
 
-    elif a == "F":
+    elif "F" in a:
         input_key = input()
         location  = "tests/" + input_key
         with open(location) as f:
