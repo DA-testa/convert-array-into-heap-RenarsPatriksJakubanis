@@ -15,21 +15,21 @@ def build_heap(data):
     return swaps
 
 def main():
-    swaps = []
     i = input()
     if i == "I":
-        n = input()
+        n = int(input())
         data = list(map(int, input().split()))
-        swaps = build_heap(data)
-        
+        assert len(data) == n
+
     elif i == "F":
         input_key = input()
         location  = "tests/" + input_key
         with open(location) as f:
-            n = f.readline()
+            n = int(f.readline())
             data = list(map(int, f.readline().split()))
-            swaps = build_heap(data)
-    
+            assert len(data) == n
+
+    swaps = build_heap(data)
     print(len(swaps))
     for i, j in swaps:
         print(i, j)
