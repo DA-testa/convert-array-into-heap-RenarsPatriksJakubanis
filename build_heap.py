@@ -1,8 +1,8 @@
 # python3
 def build_heap(data):
     swaps = []
-
-    for i in range(len(data) // 1, -1, -1):
+    temp = len(data)
+    for i in range(temp // 1, -1, -1):
         while (i * 2) + 1 < len(data):
             heap_ch = 1 + (2 * i)
             if data[heap_ch] > data[i]:
@@ -30,6 +30,7 @@ def main():
             assert len(data) == n
 
     swaps = build_heap(data)
+
     print(len(swaps))
     for i, j in swaps:
         print(i, j)
