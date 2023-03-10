@@ -15,7 +15,6 @@ def build_heap(data):
     return swaps
 
 def main():
-    swaps = []
     i = input()
     if i == "I":
         n = input()
