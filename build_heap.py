@@ -15,7 +15,7 @@ def build_heap(data):
 def main():
     i = input()
     if i == "I":
-        n = int(input())
+        n = input()
         data = list(map(int, input().split()))
         swaps = build_heap(data)
 
